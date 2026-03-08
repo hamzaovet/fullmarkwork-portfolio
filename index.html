@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO & Meta Tags -->
+    <title>Hamza Abbas | Senior Financial & Business Consultant | Full Mark Work</title>
+    <meta name="description" content="Senior Financial and Business Consultant with 27+ years experience. Expert in accounting, investment consulting, feasibility studies, and university teaching across Egypt, KSA, and UAE.">
+    <meta name="keywords" content="financial consultant, accounting expert, feasibility studies, business consulting, university accounting instructor, Full Mark Work, Hamza Abbas, investment analysis">
+    <meta name="author" content="Hamza Abbas">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://fullmarkwork.net/">
+    <meta property="og:title" content="Hamza Abbas | Senior Financial & Business Consultant">
+    <meta property="og:description" content="27+ Years of excellence in Financial Consulting and Business Administration. Leading the way in digital accounting solutions.">
+    <meta property="og:image" content="https://i.postimg.cc/FzszwTvn/Me.png">
+
+    <!-- Favicon (Minimal Gold 'F' Logo) -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%230a0a0a'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='central' text-anchor='middle' font-family='serif' font-weight='bold' font-size='60' fill='%23d4af37'%3EF%3C/text%3E%3C/svg%3E">
+
+    <!-- Structured Data (JSON-LD) for SEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Hamza Abbas",
+      "jobTitle": "Senior Financial & Business Consultant",
+      "worksFor": {
+        "@type": "Organization",
+        "name": "Full Mark Work"
+      },
+      "url": "https://fullmarkwork.net",
+      "description": "Professional consultant with 27+ years in finance and accounting.",
+      "knowsAbout": ["Financial Accounting", "Investment Analysis", "Business Strategy", "Feasibility Studies"],
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": ["Egypt", "Saudi Arabia", "United Arab Emirates"]
+      }
+    }
+    </script>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                        arabic: ['Cairo', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            gold: '#d4af37',
+                            goldlight: '#f3e5ab',
+                            dark: '#0a0a0a',
+                            darker: '#050505',
+                            accent: '#1a1a1a'
+                        }
+                    },
+                    animation: {
+                        'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                        'float': 'float 6s ease-in-out infinite',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-10px)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Base Styling */
+        body { background-color: #050505; color: #d1d5db; transition: opacity 0.5s ease; }
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: #050505; }
+        ::-webkit-scrollbar-thumb { background: #d4af37; border-radius: 10px; }
+
+        /* Animation Classes */
+        .reveal { opacity: 0; transform: translateY(30px); transition: all 0.8s cubic-bezier(0.2, 0.8, 0.2, 1); }
+        .reveal.active { opacity: 1; transform: translateY(0); }
+        
+        /* Premium Image Effect */
+        .hero-portrait-container { position: relative; }
+        .hero-portrait-glow {
+            position: absolute;
+            inset: -20px;
+            background: radial-gradient(circle, rgba(212, 175, 55, 0.2) 0%, transparent 70%);
+            border-radius: 50%;
+            z-index: 0;
+            animation: pulse-glow 4s ease-in-out infinite;
+        }
+        @keyframes pulse-glow {
+            0%, 100% { transform: scale(1); opacity: 0.3; }
+            50% { transform: scale(1.1); opacity: 0.6; }
+        }
+
+        /* Parallax Background */
+        #parallax-bg {
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 120%;
+            background: radial-gradient(circle at 50% 50%, #1a1a1a 0%, #050505 100%);
+            z-index: -1;
+            will-change: transform;
+        }
+
+        /* Language Switch Logic */
+        html[dir="ltr"] .ar-content { display: none !important; }
+        html[dir="rtl"] .en-content { display: none !important; }
+        html[dir="rtl"] body { font-family: 'Cairo', sans-serif; }
+        html[dir="rtl"] .font-serif { font-family: 'Cairo', sans-serif; }
+        
+        .nav-link { position: relative; }
+        .nav-link::after {
+            content: ''; position: absolute; width: 0; height: 1px; bottom: -2px; left: 0;
+            background-color: #d4af37; transition: width 0.3s ease;
+        }
+        html[dir="rtl"] .nav-link::after { left: auto; right: 0; }
+        .nav-link:hover::after { width: 100%; }
+
+        .glass-panel {
+            background: rgba(26, 26, 26, 0.4);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+    </style>
+
+    <!-- Instant Language Check -->
+    <script>
+        (function() {
+            const savedLang = localStorage.getItem('preferredLang') || 'en';
+            const htmlTag = document.documentElement;
+            if (savedLang === 'ar') {
+                htmlTag.setAttribute('lang', 'ar');
+                htmlTag.setAttribute('dir', 'rtl');
+            }
+        })();
+    </script>
+</head>
+<body class="overflow-x-hidden">
+
+    <!-- Progress Bar -->
+    <div id="scroll-progress" class="fixed top-0 left-0 h-[2px] bg-brand-gold z-[60] transition-all duration-100" style="width: 0%"></div>
+
+    <!-- Header / Navigation -->
+    <nav id="navbar" class="fixed w-full z-50 transition-all duration-500 py-6 border-b border-transparent">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12">
+            <div class="flex justify-between items-center">
+                <!-- Brand Logo -->
+                <a href="#" class="flex items-center gap-3 group">
+                    <div class="w-10 h-10 bg-brand-gold flex items-center justify-center rounded-sm transition-transform group-hover:rotate-90">
+                        <span class="text-brand-darker font-bold text-xl">F</span>
+                    </div>
+                    <div class="flex flex-col">
+                        <span class="text-white font-serif font-bold tracking-[0.2em] text-lg uppercase leading-none">
+                            <span class="en-content">Full Mark <span class="text-brand-gold">Work</span></span>
+                            <span class="ar-content">فول مارك <span class="text-brand-gold">وورك</span></span>
+                        </span>
+                        <span class="text-[10px] text-gray-500 tracking-[0.4em] uppercase mt-1">
+                            <span class="en-content">Consulting Excellence</span>
+                            <span class="ar-content">تميز الاستشارات</span>
+                        </span>
+                    </div>
+                </a>
+
+                <!-- Nav Links -->
+                <div class="hidden lg:flex items-center space-x-10 rtl:space-x-reverse">
+                    <a href="#services" class="nav-link text-xs uppercase tracking-widest font-semibold hover:text-brand-gold transition-colors">
+                        <span class="en-content">Expertise</span><span class="ar-content">الخبرة</span>
+                    </a>
+                    <a href="#teaching" class="nav-link text-xs uppercase tracking-widest font-semibold hover:text-brand-gold transition-colors">
+                        <span class="en-content">Academic</span><span class="ar-content">الأكاديمية</span>
+                    </a>
+                    <a href="#experience" class="nav-link text-xs uppercase tracking-widest font-semibold hover:text-brand-gold transition-colors">
+                        <span class="en-content">Timeline</span><span class="ar-content">المسيرة</span>
+                    </a>
+                    
+                    <button onclick="toggleLanguage()" class="w-10 h-10 rounded-full border border-gray-800 flex items-center justify-center text-[10px] font-bold hover:border-brand-gold hover:text-brand-gold transition-all">
+                        <span class="en-content">AR</span><span class="ar-content">EN</span>
+                    </button>
+
+                    <a href="#contact" class="px-7 py-3 text-[10px] uppercase tracking-widest font-bold bg-brand-gold text-brand-darker hover:bg-white transition-all">
+                        <span class="en-content">Get in Touch</span><span class="ar-content">تواصل معنا</span>
+                    </a>
+                </div>
+
+                <!-- Mobile Trigger -->
+                <button id="mobile-btn" class="lg:hidden text-white focus:outline-none"><i class="fas fa-bars text-xl"></i></button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Parallax Hero Section -->
+    <section id="hero" class="relative min-h-screen flex items-center overflow-hidden pt-20">
+        <div id="parallax-bg"></div>
+        
+        <div class="max-w-7xl mx-auto px-6 lg:px-12 relative z-10 w-full">
+            <div class="flex flex-col-reverse lg:flex-row items-center gap-16 lg:gap-24">
+                
+                <!-- Hero Text -->
+                <div class="w-full lg:w-3/5 reveal">
+                    <div class="mb-6 flex items-center gap-4">
+                        <div class="h-[1px] w-12 bg-brand-gold"></div>
+                        <span class="text-brand-gold text-xs uppercase tracking-[0.3em] font-bold">
+                            <span class="en-content">Consultant & Academic</span>
+                            <span class="ar-content">مستشار وأكاديمي</span>
+                        </span>
+                    </div>
+                    
+                    <h1 class="text-5xl md:text-7xl lg:text-8xl font-serif font-bold text-white leading-[1.1] mb-8">
+                        <span class="en-content">Hamza <br/><span class="text-brand-gold">Abbas</span></span>
+                        <span class="ar-content">حمزة <br/><span class="text-brand-gold">عباس</span></span>
+                    </h1>
+                    
+                    <p class="text-lg md:text-xl text-gray-400 max-w-xl leading-relaxed mb-10 border-l-2 rtl:border-l-0 rtl:border-r-2 border-brand-gold pl-6 rtl:pr-6">
+                        <span class="en-content">Synthesizing 27 years of corporate financial strategy and university-level excellence into actionable business success across Egypt, UAE, and KSA.</span>
+                        <span class="ar-content">دمج 27 عاماً من الاستراتيجية المالية للشركات والتميز الأكاديمي الجامعي في نجاحات تجارية ملموسة في مصر والإمارات والسعودية.</span>
+                    </p>
+                    
+                    <div class="flex flex-wrap gap-6">
+                        <a href="#contact" class="px-10 py-5 bg-brand-gold text-brand-darker font-bold uppercase tracking-widest text-xs hover:bg-white transition-all shadow-xl">
+                            <span class="en-content">Consultation</span><span class="ar-content">طلب استشارة</span>
+                        </a>
+                        <a href="#services" class="px-10 py-5 border border-gray-700 text-white font-bold uppercase tracking-widest text-xs hover:border-brand-gold transition-all">
+                            <span class="en-content">Our Services</span><span class="ar-content">خدماتنا</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Hero Image with Pulse -->
+                <div class="w-full lg:w-2/5 flex justify-center lg:justify-end reveal reveal-delay-2">
+                    <div class="hero-portrait-container group relative">
+                        <div class="hero-portrait-glow"></div>
+                        <div class="relative w-64 h-64 sm:w-80 sm:h-80 lg:w-[450px] lg:h-[450px] rounded-full p-2 border border-brand-gold/30 group-hover:border-brand-gold transition-all duration-700 overflow-hidden">
+                            <img src="https://i.postimg.cc/FzszwTvn/Me.png" alt="Hamza Abbas" class="w-full h-full object-cover object-top filter grayscale group-hover:grayscale-0 transition-all duration-1000 scale-100 group-hover:scale-105">
+                            <div class="absolute inset-0 bg-gradient-to-t from-brand-dark/60 to-transparent"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Bar -->
+    <section class="bg-brand-accent py-12 border-y border-gray-900">
+        <div class="max-w-7xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-8">
+            <div class="text-center reveal">
+                <p class="text-3xl font-serif font-bold text-brand-gold">27+</p>
+                <p class="text-[10px] uppercase tracking-widest text-gray-500 mt-2">
+                    <span class="en-content">Years Experience</span><span class="ar-content">سنوات الخبرة</span>
+                </p>
+            </div>
+            <div class="text-center reveal reveal-delay-1">
+                <p class="text-3xl font-serif font-bold text-brand-gold">500+</p>
+                <p class="text-[10px] uppercase tracking-widest text-gray-500 mt-2">
+                    <span class="en-content">Projects Completed</span><span class="ar-content">مشروع منجز</span>
+                </p>
+            </div>
+            <div class="text-center reveal reveal-delay-2">
+                <p class="text-3xl font-serif font-bold text-brand-gold">3</p>
+                <p class="text-[10px] uppercase tracking-widest text-gray-500 mt-2">
+                    <span class="en-content">Global Markets</span><span class="ar-content">أسواق عالمية</span>
+                </p>
+            </div>
+            <div class="text-center reveal reveal-delay-3">
+                <p class="text-3xl font-serif font-bold text-brand-gold">10k+</p>
+                <p class="text-[10px] uppercase tracking-widest text-gray-500 mt-2">
+                    <span class="en-content">Students Taught</span><span class="ar-content">طالب جامعي</span>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Professional Services Grid -->
+    <section id="services" class="py-32">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12">
+            <div class="mb-20 reveal">
+                <h2 class="text-4xl md:text-5xl font-serif font-bold text-white mb-6">
+                    <span class="en-content">Consulting <span class="text-brand-gold">Portfolio</span></span>
+                    <span class="ar-content">محفظة <span class="text-brand-gold">الاستشارات</span></span>
+                </h2>
+                <div class="h-1 w-20 bg-brand-gold"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-0 border border-gray-900">
+                <div class="p-12 border-gray-900 border-b border-r hover:bg-brand-accent transition-all group reveal">
+                    <i class="fas fa-chart-line text-3xl text-brand-gold mb-8 opacity-50 group-hover:opacity-100"></i>
+                    <h3 class="text-xl font-bold text-white mb-4">
+                        <span class="en-content">Feasibility Studies</span><span class="ar-content">دراسات الجدوى</span>
+                    </h3>
+                    <p class="text-sm text-gray-500 leading-relaxed">
+                        <span class="en-content">Precision-engineered economic modeling for SMEs to ensure high ROI and sustainable market entry.</span>
+                        <span class="ar-content">نماذج اقتصادية دقيقة للمؤسسات الصغيرة والمتوسطة لضمان أعلى عوائد ودخول مستدام للسوق.</span>
+                    </p>
+                </div>
+                <div class="p-12 border-gray-900 border-b border-r hover:bg-brand-accent transition-all group reveal">
+                    <i class="fas fa-balance-scale text-3xl text-brand-gold mb-8 opacity-50 group-hover:opacity-100"></i>
+                    <h3 class="text-xl font-bold text-white mb-4">
+                        <span class="en-content">Financial Strategy</span><span class="ar-content">الاستراتيجية المالية</span>
+                    </h3>
+                    <p class="text-sm text-gray-500 leading-relaxed">
+                        <span class="en-content">Tailored corporate governance and financial restructuring designed for large-scale operations.</span>
+                        <span class="ar-content">حوكمة الشركات المخصصة وإعادة الهيكلة المالية المصممة للعمليات واسعة النطاق.</span>
+                    </p>
+                </div>
+                <div class="p-12 border-gray-900 border-b hover:bg-brand-accent transition-all group reveal">
+                    <i class="fas fa-shield-alt text-3xl text-brand-gold mb-8 opacity-50 group-hover:opacity-100"></i>
+                    <h3 class="text-xl font-bold text-white mb-4">
+                        <span class="en-content">Audit & Compliance</span><span class="ar-content">التدقيق والامتثال</span>
+                    </h3>
+                    <p class="text-sm text-gray-500 leading-relaxed">
+                        <span class="en-content">Ensuring full regulatory compliance and accounting transparency with international standards.</span>
+                        <span class="ar-content">ضمان الامتثال التنظيمي الكامل والشفافية المحاسبية وفق المعايير الدولية.</span>
+                    </p>
+                </div>
+                <div class="p-12 border-gray-900 border-r hover:bg-brand-accent transition-all group reveal">
+                    <i class="fas fa-desktop text-3xl text-brand-gold mb-8 opacity-50 group-hover:opacity-100"></i>
+                    <h3 class="text-xl font-bold text-white mb-4">
+                        <span class="en-content">Accounting Software</span><span class="ar-content">الأنظمة المحاسبية</span>
+                    </h3>
+                    <p class="text-sm text-gray-500 leading-relaxed">
+                        <span class="en-content">Development of bespoke accounting digital tools and automated reporting systems.</span>
+                        <span class="ar-content">تطوير أدوات رقمية محاسبية مخصصة وأنظمة تقارير مؤتمتة.</span>
+                    </p>
+                </div>
+                <div class="p-12 border-gray-900 border-r hover:bg-brand-accent transition-all group reveal">
+                    <i class="fas fa-brain text-3xl text-brand-gold mb-8 opacity-50 group-hover:opacity-100"></i>
+                    <h3 class="text-xl font-bold text-white mb-4">
+                        <span class="en-content">AI Integration</span><span class="ar-content">دمج الذكاء الاصطناعي</span>
+                    </h3>
+                    <p class="text-sm text-gray-500 leading-relaxed">
+                        <span class="en-content">Leveraging modern AI tools to optimize financial analysis and forecast accuracy.</span>
+                        <span class="ar-content">استغلال أدوات الذكاء الاصطناعي لتحسين التحليل المالي ودقة التوقعات.</span>
+                    </p>
+                </div>
+                <div class="p-12 border-gray-900 hover:bg-brand-accent transition-all group reveal">
+                    <i class="fas fa-graduation-cap text-3xl text-brand-gold mb-8 opacity-50 group-hover:opacity-100"></i>
+                    <h3 class="text-xl font-bold text-white mb-4">
+                        <span class="en-content">Professional Coaching</span><span class="ar-content">التوجيه المهني</span>
+                    </h3>
+                    <p class="text-sm text-gray-500 leading-relaxed">
+                        <span class="en-content">Executive training for leadership teams in financial management and business economics.</span>
+                        <span class="ar-content">تدريب تنفيذي لفرق القيادة في الإدارة المالية واقتصاديات الأعمال.</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Academic Excellence -->
+    <section id="teaching" class="py-32 bg-brand-dark">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12 grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+            <div class="reveal">
+                <span class="text-brand-gold text-[10px] uppercase tracking-[0.4em] font-bold block mb-4">Academy</span>
+                <h2 class="text-4xl md:text-5xl font-serif font-bold text-white mb-8">
+                    <span class="en-content">University Instruction & Knowledge Transfer</span>
+                    <span class="ar-content">التدريس الجامعي ونقل المعرفة</span>
+                </h2>
+                <p class="text-gray-400 mb-10 leading-relaxed">
+                    <span class="en-content">Decades of teaching complex financial disciplines at renowned universities, shaping thousands of professional minds across the Middle East.</span>
+                    <span class="ar-content">عقود من تدريس التخصصات المالية المعقدة في جامعات مرموقة، وتشكيل آلاف العقول المهنية في جميع أنحاء الشرق الأوسط.</span>
+                </p>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div class="flex items-center gap-4 text-xs font-bold text-white tracking-widest uppercase">
+                        <div class="w-2 h-2 bg-brand-gold"></div>
+                        <span class="en-content">Financial Management</span><span class="ar-content">الإدارة المالية</span>
+                    </div>
+                    <div class="flex items-center gap-4 text-xs font-bold text-white tracking-widest uppercase">
+                        <div class="w-2 h-2 bg-brand-gold"></div>
+                        <span class="en-content">Cost Accounting</span><span class="ar-content">محاسبة التكاليف</span>
+                    </div>
+                    <div class="flex items-center gap-4 text-xs font-bold text-white tracking-widest uppercase">
+                        <div class="w-2 h-2 bg-brand-gold"></div>
+                        <span class="en-content">Investment Analysis</span><span class="ar-content">تحليل الاستثمار</span>
+                    </div>
+                    <div class="flex items-center gap-4 text-xs font-bold text-white tracking-widest uppercase">
+                        <div class="w-2 h-2 bg-brand-gold"></div>
+                        <span class="en-content">Managerial Accounting</span><span class="ar-content">المحاسبة الإدارية</span>
+                    </div>
+                </div>
+            </div>
+            <div class="relative reveal reveal-delay-2">
+                <div class="absolute -inset-4 border border-brand-gold/20 -z-10"></div>
+                <div class="glass-panel p-1 border-gray-800">
+                    <div class="aspect-video bg-gray-900 flex items-center justify-center relative overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&q=80" alt="Teaching" class="opacity-40 grayscale hover:grayscale-0 transition-all duration-700">
+                        <div class="absolute inset-0 flex flex-col items-center justify-center p-8 text-center">
+                            <i class="fas fa-university text-5xl text-brand-gold mb-6"></i>
+                            <h4 class="text-white font-serif italic text-xl">"Education is the bedrock of strategic financial leadership."</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Digital Platform CTA -->
+    <section class="py-24 bg-brand-gold text-brand-darker">
+        <div class="max-w-7xl mx-auto px-6 text-center reveal">
+            <h2 class="text-3xl md:text-5xl font-serif font-bold mb-8 uppercase tracking-tighter">
+                <span class="en-content">Access The Digital Accounting Suite</span>
+                <span class="ar-content">الوصول إلى الجناح المحاسبي الرقمي</span>
+            </h2>
+            <div class="flex flex-wrap justify-center gap-6">
+                <a href="https://fullmarkwork.net" target="_blank" class="px-12 py-5 bg-brand-dark text-white font-bold uppercase tracking-widest text-xs hover:bg-black transition-all">
+                    <span class="en-content">Visit Portal</span><span class="ar-content">زيارة البوابة</span>
+                </a>
+                <a href="https://www.youtube.com/@fullmarkwork-gcc" target="_blank" class="px-12 py-5 border border-brand-dark text-brand-dark font-bold uppercase tracking-widest text-xs hover:bg-brand-dark hover:text-white transition-all">
+                    <span class="en-content">YouTube Channel</span><span class="ar-content">قناة اليوتيوب</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Timeline Section -->
+    <section id="experience" class="py-32 bg-brand-darker">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12">
+            <div class="flex flex-col lg:flex-row gap-20">
+                <div class="w-full lg:w-1/3 reveal">
+                    <span class="text-brand-gold text-[10px] uppercase tracking-[0.4em] font-bold block mb-4">Milestones</span>
+                    <h2 class="text-4xl font-serif font-bold text-white mb-8">
+                        <span class="en-content">27 Years of Global Presence</span>
+                        <span class="ar-content">27 عاماً من الحضور العالمي</span>
+                    </h2>
+                    <p class="text-gray-500">
+                        <span class="en-content">A career built on excellence across Egypt, Saudi Arabia, and the United Arab Emirates.</span>
+                        <span class="ar-content">مسيرة مبنية على التميز عبر مصر والمملكة العربية السعودية والإمارات العربية المتحدة.</span>
+                    </p>
+                </div>
+                <div class="w-full lg:w-2/3 reveal reveal-delay-2 space-y-12">
+                    <div class="relative pl-12 rtl:pl-0 rtl:pr-12 border-l rtl:border-l-0 rtl:border-r border-brand-gold/30 pb-4">
+                        <div class="absolute left-[-5px] rtl:left-auto rtl:right-[-5px] top-0 w-2.5 h-2.5 bg-brand-gold rounded-full"></div>
+                        <h4 class="text-white font-bold text-lg mb-2">Egypt</h4>
+                        <p class="text-sm text-gray-500">Foundational expertise and extensive consulting across diverse sectors in the Egyptian market.</p>
+                    </div>
+                    <div class="relative pl-12 rtl:pl-0 rtl:pr-12 border-l rtl:border-l-0 rtl:border-r border-brand-gold/30 pb-4">
+                        <div class="absolute left-[-5px] rtl:left-auto rtl:right-[-5px] top-0 w-2.5 h-2.5 bg-brand-gold rounded-full"></div>
+                        <h4 class="text-white font-bold text-lg mb-2">Saudi Arabia</h4>
+                        <p class="text-sm text-gray-500">Strategic system implementations and financial governance aligned with the Vision 2030 framework.</p>
+                    </div>
+                    <div class="relative pl-12 rtl:pl-0 rtl:pr-12 border-l rtl:border-l-0 rtl:border-r border-brand-gold/30">
+                        <div class="absolute left-[-5px] rtl:left-auto rtl:right-[-5px] top-0 w-2.5 h-2.5 bg-brand-gold rounded-full"></div>
+                        <h4 class="text-white font-bold text-lg mb-2">United Arab Emirates</h4>
+                        <p class="text-sm text-gray-500">Advanced investment analysis and high-level corporate consulting in global financial hubs.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-32 bg-brand-dark">
+        <div class="max-w-3xl mx-auto px-6 text-center">
+            <div class="reveal">
+                <span class="text-brand-gold text-[10px] uppercase tracking-[0.4em] font-bold block mb-4">Inquiry</span>
+                <h2 class="text-4xl md:text-5xl font-serif font-bold text-white mb-8">
+                    <span class="en-content">Schedule a Consultation</span>
+                    <span class="ar-content">جدولة استشارة مهنية</span>
+                </h2>
+                <div class="flex flex-col md:flex-row gap-6 justify-center mt-12">
+                    <a href="https://wa.me/201551190990" target="_blank" class="flex-1 glass-panel p-8 hover:border-brand-gold transition-all group">
+                        <i class="fab fa-whatsapp text-2xl text-brand-gold mb-4"></i>
+                        <p class="text-white font-bold text-sm uppercase tracking-widest">+20 155 119 0990</p>
+                    </a>
+                    <a href="https://fullmarkwork.net" target="_blank" class="flex-1 glass-panel p-8 hover:border-brand-gold transition-all group">
+                        <i class="fas fa-globe text-2xl text-brand-gold mb-4"></i>
+                        <p class="text-white font-bold text-sm uppercase tracking-widest">Digital Platform</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 bg-black border-t border-gray-900">
+        <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-8">
+            <div class="flex items-center gap-4">
+                <div class="w-8 h-8 bg-brand-gold flex items-center justify-center rounded-sm">
+                    <span class="text-brand-darker font-bold text-sm">F</span>
+                </div>
+                <span class="text-gray-500 text-[10px] uppercase tracking-widest font-bold">© 2026 Hamza Abbas | Full Mark Work</span>
+            </div>
+            <div class="flex gap-8">
+                <a href="https://www.youtube.com/@fullmarkwork-gcc" target="_blank" class="text-gray-600 hover:text-brand-gold text-lg transition-colors"><i class="fab fa-youtube"></i></a>
+                <a href="https://wa.me/201551190990" target="_blank" class="text-gray-600 hover:text-brand-gold text-lg transition-colors"><i class="fab fa-whatsapp"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-overlay" class="fixed inset-0 bg-brand-darker z-[100] translate-x-full transition-transform duration-500 flex flex-col p-12 lg:hidden">
+        <button id="close-btn" class="self-end text-white text-3xl mb-12 focus:outline-none"><i class="fas fa-times"></i></button>
+        <div class="flex flex-col space-y-8">
+            <a href="#hero" class="text-3xl font-serif text-white mobile-link">Home</a>
+            <a href="#services" class="text-3xl font-serif text-white mobile-link">Services</a>
+            <a href="#teaching" class="text-3xl font-serif text-white mobile-link">Academic</a>
+            <a href="#experience" class="text-3xl font-serif text-white mobile-link">Experience</a>
+            <a href="#contact" class="text-3xl font-serif text-brand-gold mobile-link">Contact</a>
+        </div>
+        <div class="mt-auto">
+            <button onclick="toggleLanguage()" class="text-brand-gold font-bold uppercase tracking-widest text-sm">Switch Language</button>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script>
+        // Language Toggle System
+        function setLanguage(lang) {
+            const htmlTag = document.documentElement;
+            if (lang === 'ar') {
+                htmlTag.setAttribute('lang', 'ar');
+                htmlTag.setAttribute('dir', 'rtl');
+            } else {
+                htmlTag.setAttribute('lang', 'en');
+                htmlTag.setAttribute('dir', 'ltr');
+            }
+            localStorage.setItem('preferredLang', lang);
+        }
+
+        function toggleLanguage() {
+            document.body.style.opacity = '0';
+            setTimeout(() => {
+                const currentLang = document.documentElement.getAttribute('lang');
+                const newLang = currentLang === 'en' ? 'ar' : 'en';
+                setLanguage(newLang);
+                document.body.style.opacity = '1';
+            }, 400);
+        }
+
+        // Parallax & Scroll Effects
+        const parallaxBg = document.getElementById('parallax-bg');
+        const scrollProgress = document.getElementById('scroll-progress');
+        const navbar = document.getElementById('navbar');
+
+        window.addEventListener('scroll', () => {
+            const scroll = window.pageYOffset;
+            
+            // Parallax
+            if (parallaxBg) {
+                parallaxBg.style.transform = `translateY(${scroll * 0.4}px)`;
+            }
+            
+            // Progress Bar
+            const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const scrolled = (scroll / height) * 100;
+            scrollProgress.style.width = scrolled + '%';
+            
+            // Navbar Shrink
+            if (scroll > 100) {
+                navbar.classList.add('py-4', 'bg-black/95', 'backdrop-blur-xl', 'border-gray-900');
+                navbar.classList.remove('py-6', 'border-transparent');
+            } else {
+                navbar.classList.remove('py-4', 'bg-black/95', 'backdrop-blur-xl', 'border-gray-900');
+                navbar.classList.add('py-6', 'border-transparent');
+            }
+        });
+
+        // Mobile Menu
+        const mobileBtn = document.getElementById('mobile-btn');
+        const closeBtn = document.getElementById('close-btn');
+        const mobileOverlay = document.getElementById('mobile-overlay');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        if (mobileBtn) mobileBtn.onclick = () => mobileOverlay.classList.remove('translate-x-full');
+        if (closeBtn) closeBtn.onclick = () => mobileOverlay.classList.add('translate-x-full');
+        mobileLinks.forEach(link => link.onclick = () => mobileOverlay.classList.add('translate-x-full'));
+
+        // Reveal on Scroll
+        const reveals = document.querySelectorAll('.reveal');
+        const observerOptions = { threshold: 0.1, rootMargin: "0px 0px -50px 0px" };
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        reveals.forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>
